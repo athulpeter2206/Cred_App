@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Enter Username or Password",Toast.LENGTH_LONG).show();
         }else{
             String a[];
-            a = udb.getOneDepartment(uName);
+            a = udb.getUserDetails(uName);
             System.out.println(a);
             if(a[0] !=""){
                 System.out.println(a[3]);
@@ -54,6 +54,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Invalid Username!", Toast.LENGTH_LONG).show();
             }
         }
-
     }
 }

@@ -15,7 +15,8 @@ public class ChangePassword extends AppCompatActivity {
     TextView name,uname;
     EditText pass,confpass;
     String idpassed, namepassed, unamepassed,passwPassed;
-    ClassForDBUsers udb;UserDetails u = new UserDetails();
+    ClassForDBUsers udb;
+    UserDetails u = new UserDetails();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +31,8 @@ public class ChangePassword extends AppCompatActivity {
         unamepassed = b.getString("uname");
         passwPassed = b.getString("passw");
 
-        name.setText("Name : "+namepassed);
-        uname.setText("UserName : "+unamepassed);
+        name.setText(namepassed);
+        uname.setText(unamepassed);
 
         udb = new ClassForDBUsers(this);
     }
@@ -51,6 +52,8 @@ public class ChangePassword extends AppCompatActivity {
             }else{
                 Toast.makeText(this,"Password changed Failed!",Toast.LENGTH_LONG).show();
             }
+        }else{
+            Toast.makeText(this,"Password's doesn't match",Toast.LENGTH_LONG).show();
         }
 
     }

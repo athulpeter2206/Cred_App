@@ -41,7 +41,7 @@ public class ClassForDBUsers extends SQLiteOpenHelper {
         }
     }
 
-    public String[] getOneDepartment(String UNAME) {
+    public String[] getUserDetails(String UNAME) {
         String a[] = new String[4];
         try {
             SQLiteDatabase db = this.getReadableDatabase();
